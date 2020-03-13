@@ -1,1 +1,67 @@
-<p>purphase works!</p>
+<div class="fluid-container">
+  <mat-toolbar color="primary">
+    <span>Groccit beta</span>
+  </mat-toolbar>
+  <div style="margin-left: 25%; margin-right: 25%; margin-top: 5%; width: 50%;">
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+
+      <mat-label>Type</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of types " [value]="food.value">
+          {{food.valueView}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="example-container">
+    <mat-form-field>
+      <mat-label>{{brand}}</mat-label>
+      <input matInput type="text" >
+    </mat-form-field>
+
+
+</div>
+  <div  class="example-container">
+    <mat-form-field>
+      <mat-label>{{url}}</mat-label>
+      <input  matInput type="url"/>
+    </mat-form-field>
+  </div>
+<div class="example-container">
+  <mat-form-field>
+    <mat-label>{{price}}</mat-label>
+    <input matInput type="number"/>
+  </mat-form-field>
+
+</div>
+  <div class="example-container">
+    <mat-form-field>
+      <mat-label>{{city}}</mat-label>
+      <input matInput type="text" />
+    </mat-form-field>
+
+  </div>
+  <div class="example-container">
+    <mat-form-field>
+      <mat-label>{{zipcode}}</mat-label>
+      <input matInput type="number" maxlength="4"/>
+    </mat-form-field>
+  </div>
+  <div class="example-container">
+    <mat-form-field>
+      <mat-label>{{name}}</mat-label>
+      <input matInput type="text"/>
+    </mat-form-field>
+  </div>
+  <div class="example-container">
+    <mat-form-field>
+      <mat-label>{{phone}}</mat-label>
+      <input matInput type="tel"  prefix="+45"/>
+    </mat-form-field>
+  </div>
+<div class="example-container">
+  <button mat-flat-button>{{create}}</button>
+</div>
+  </div>
+</div>
