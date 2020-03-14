@@ -21,13 +21,14 @@ phone = 'Tlf nr';
 create = 'Opret';
 color = 'Farve';
 comment = 'Kommentar';
-  email = 'E-mail'
+  email = 'E-mail';
   status = '';
+  type: FormControl;
 fc: FormGroup;
   constructor(private  ps: PurphaseService, private  fb: FormBuilder) {
     this.fc = fb.group({
       Brand: [],
-    Types: [],
+    Types: new FormControl(),
     Price: [],
     Url: [],
     Comment: [],
@@ -53,6 +54,9 @@ fc: FormGroup;
        Phone: this.fc.controls.Phone.value, Name: this.fc.controls.Name.value, Comment: this.fc.controls.Comment.value,
        Color: this.fc.controls.Color.value,
        Brand: this.fc.controls.Brand.value, City: this.fc.controls.City.value, Email: this.fc.controls.Email.value} };
-   this.ps.AddPurphase(purphase).pipe().subscribe(s => { this.status = 'Tak for indsendelsen af købsintention, Du vil blive kontaktet af Glenn Hunnich snarest'; });
+   this.ps.AddPurphase(purphase).pipe().subscribe(s => { this.status = 'Tak for indsendelsen af købsintention, ' +
+     'Du vil blive kontaktet af Glenn Hunnich snarest'; });
   }
+
+
 }
