@@ -11,11 +11,13 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import {PurphaseService} from './purphase.service';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
 const appRoutes: Routes = [
-  { path: '', component: PurphaseComponent },
+  { path: '', component: PurphaseComponent }
 
 ];
 @NgModule({
@@ -31,9 +33,12 @@ const appRoutes: Routes = [
     MatSelectModule,
     MatInputModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [PurphaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
