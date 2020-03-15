@@ -11,6 +11,7 @@ export interface TestPurchase {
   Zipcode?: number;
   Color?: string;
   Size?: string;
+  Model?: string;
 }
 
 export interface RootObject {
