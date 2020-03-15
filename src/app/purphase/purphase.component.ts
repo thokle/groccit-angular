@@ -13,7 +13,7 @@ import {RootObject} from '../test-purphase';
 export class PurphaseComponent implements OnInit {
  brand = 'Mærke';
  url = 'Url';
- price = 'pris';
+ price = 'Pris set på internettet';
  city = 'By';
 zipcode = 'Post nr.';
 name = 'Fulde navn';
