@@ -20,4 +20,9 @@ export class PurphaseService {
     return this.http.post( url, JSON.stringify(body),
       {reportProgress: true, headers: new HttpHeaders().set('Content-Type', 'application/json')}).pipe();
   }
+  public GetAllPurphases(): Observable<RootObject[]> {
+
+    const url = this.baseurl + '/all';
+    return  this.http.get<RootObject[]>(url).pipe();
+  }
 }

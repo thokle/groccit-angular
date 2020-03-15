@@ -13,17 +13,21 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {PurphaseService} from './purphase.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { PurphaseIntentionsComponent } from './purphase-intentions/purphase-intentions.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 
 const appRoutes: Routes = [
-  { path: '', component: PurphaseComponent }
+  { path: '', component: PurphaseComponent },
+  {path: 'listpurphase' , component: PurphaseIntentionsComponent}
 
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    PurphaseComponent
+    PurphaseComponent,
+    PurphaseIntentionsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,8 @@ const appRoutes: Routes = [
     MatButtonModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule
   ],
   providers: [PurphaseService],
   bootstrap: [AppComponent]
