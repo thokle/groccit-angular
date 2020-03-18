@@ -1,7 +1,14 @@
 <div class="fluid-container">
 
   <mat-toolbar color="primary">
-    <span>Groccit beta</span>
+    <mat-toolbar-row>
+      <span routerLink="/"> GROCCIT.COM </span>
+      <span class="example-spacer"></span>
+      <div class="example-icon" aria-hidden="false" aria-label="Example heart icon">
+        <a routerLink="gdpr" style="color: white; font-weight: lighter; font-size: 8;" >Privatlivspolitik</a>
+      </div>
+
+    </mat-toolbar-row>
   </mat-toolbar>
   <router-outlet>
 

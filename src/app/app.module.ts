@@ -15,19 +15,24 @@ import {PurphaseService} from './purphase.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PurphaseIntentionsComponent } from './purphase-intentions/purphase-intentions.component';
 import {MatTableModule} from '@angular/material/table';
+import { GdprComponent } from './gdpr/gdpr.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
 const appRoutes: Routes = [
   { path: '', component: PurphaseComponent },
-  {path: 'listpurphase' , component: PurphaseIntentionsComponent}
+  {path: 'listpurphase' , component: PurphaseIntentionsComponent},
+  {path: 'gdpr', component: GdprComponent}
+
 
 ];
 @NgModule({
   declarations: [
     AppComponent,
     PurphaseComponent,
-    PurphaseIntentionsComponent
+    PurphaseIntentionsComponent,
+    GdprComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule
   ],
   providers: [PurphaseService],
   bootstrap: [AppComponent]

@@ -24,6 +24,7 @@ comment = 'Kommentar';
   email = 'E-mail';
   status = '';
   model = 'Model'
+  size = 'Størrelse'
   type: FormControl;
 fc: FormGroup;
   constructor(private  ps: PurphaseService, private  fb: FormBuilder) {
@@ -55,7 +56,8 @@ fc: FormGroup;
        Types: this.fc.controls.Types.value, Size: this.fc.controls.Size.value, Price: Number.parseInt(this.fc.controls.Price.value, 2),
        Phone: this.fc.controls.Phone.value, Name: this.fc.controls.Name.value, Comment: this.fc.controls.Comment.value,
        Color: this.fc.controls.Color.value,
-       Brand: this.fc.controls.Brand.value, City: this.fc.controls.City.value, Email: this.fc.controls.Email.value, Model: this.fc.controls.Model.value} };
+       Brand: this.fc.controls.Brand.value, City: this.fc.controls.City.value, Email: this.fc.controls.Email.value,
+       Model: this.fc.controls.Model.value} };
    this.ps.AddPurphase(purphase).pipe().subscribe(s => { this.status = 'Tak for indsendelsen af købsintention, ' +
      'Du vil blive kontaktet af Glenn Hunnich snarest'; });
   }
