@@ -17,13 +17,17 @@ import { PurphaseIntentionsComponent } from './purphase-intentions/purphase-inte
 import {MatTableModule} from '@angular/material/table';
 import { GdprComponent } from './gdpr/gdpr.component';
 import {MatIconModule} from '@angular/material/icon';
+import { UserComponent } from './user/user.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 
 
 const appRoutes: Routes = [
   { path: '', component: PurphaseComponent },
   {path: 'listpurphase' , component: PurphaseIntentionsComponent},
-  {path: 'gdpr', component: GdprComponent}
+  {path: 'gdpr', component: GdprComponent},
+  {path: 'user', component: UserComponent}
 
 
 ];
@@ -32,7 +36,8 @@ const appRoutes: Routes = [
     AppComponent,
     PurphaseComponent,
     PurphaseIntentionsComponent,
-    GdprComponent
+    GdprComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,9 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [PurphaseService],
   bootstrap: [AppComponent]
