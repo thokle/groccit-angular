@@ -20,8 +20,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { UserComponent } from './user/user.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-
-
+import {registerLocaleData} from '@angular/common';
+import LocaeDk from '@angular/common/locales/en-DK';
+registerLocaleData(LocaeDk, 'en-DK');
 
 const appRoutes: Routes = [
   { path: '', component: PurphaseComponent },
