@@ -22,6 +22,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {registerLocaleData} from '@angular/common';
 import LocaeDk from '@angular/common/locales/en-DK';
+import { LoginComponent } from './login/login.component';
 registerLocaleData(LocaeDk, 'en-DK');
 
 const appRoutes: Routes = [
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     PurphaseComponent,
     PurphaseIntentionsComponent,
     GdprComponent,
-    UserComponent
+    UserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
