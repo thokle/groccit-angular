@@ -37,8 +37,8 @@ fc: FormGroup;
     });
   }
 
-   types: Types[] = [{value: 'Tøj', valueView: 'Tøj' }, {value: 'Kosmetik', valueView: 'Kosmetik' },
-     {value: 'Sko' , valueView: 'Sko'}, {value: 'Børnetøj', valueView: 'Børnetøj'}];
+   types: Types[] = [ {value: 'Kosmetik', valueView: 'Kosmetik' },
+     {value: 'Sko' , valueView: 'Sko'}, {value: 'Legetøj', valueView: 'Legetøj'}];
   ngOnInit(): void {
   }
 
